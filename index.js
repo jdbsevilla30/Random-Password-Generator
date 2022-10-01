@@ -7,17 +7,18 @@ let secondPassword = document.getElementById("second-password");
 
 
 
+
+let passLength = 15;
+
 let passwordStorageFirst = "";
 let passwordStorageSecond = "";
 
 
 function generate() {
-
-    for (let i = 0; i <= 15; i++) {
-        passwordStorageFirst += characters[Math.floor(Math.random() * characters.length)];
-        passwordStorageSecond += characters[Math.floor(Math.random() * characters.length)];
-
-        if (passwordStorageFirst.length === 15 && passwordStorageSecond.length === 15) {
+    for (let i = 0; i <= passLength; i++) {
+        passwordStorageFirst += generateChar1();
+        passwordStorageSecond += generateChar2();
+        if (passwordStorageFirst.length === passLength && passwordStorageSecond.length === passLength) {
             console.log(passwordStorageFirst);
             console.log(passwordStorageSecond);
             firstPassword.textContent = passwordStorageFirst;
@@ -26,5 +27,19 @@ function generate() {
             passwordStorageSecond = "";
         }
     }
+}
+
+
+
+function generateChar1() {
+    let randomChar1 = Math.floor(Math.random() * characters.length);
+    return characters[randomChar1];
+
+}
+
+
+function generateChar2() {
+    let randomChar2 = Math.floor(Math.random() * characters.length);
+    return characters[randomChar2];
 }
 
