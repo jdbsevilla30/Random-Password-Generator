@@ -1,0 +1,112 @@
+#first-password,
+#second-password {
+    padding: 0.5rem;
+    color: #2B3A67;
+    background-color: #B3AF8F;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.hero {
+    margin-top: 15%;
+    padding: 2rem;
+    min-width: 50%;
+
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.container {
+
+    padding: 0.5rem;
+    min-width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+}
+
+.btn-gen {
+    border-radius: 8px;
+    min-width: 10%;
+    background-color: #66999B;
+}
+
+.btn-gen:hover {
+    cursor: alias;
+}
+
+.hero>h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #2B3A67;
+}
+
+.hero>h2 {
+    color: #496A81;
+}
+
+
+@media (min-width:320px) {
+
+    body {
+        background-color: #FFC482;
+    }
+
+    #first-password,
+    #second-password {
+        width: 50%;
+    }
+
+}
+
+@media (min-width:481px) {
+
+
+    #first-password,
+    #second-password {
+        width: 40%;
+    }
+
+}
+
+@media (min-width:641px) {
+
+
+    #first-password,
+    #second-password {
+        width: 30%;
+    }
+
+}
+
+@media (min-width:961px) {
+
+
+    #first-password,
+    #second-password {
+        width: 30%;
+    }
+
+}
+
+@media (min-width:1025px) {
+
+
+    #first-password,
+    #second-password {
+        width: 20%;
+    }
+}
+
+@media (min-width:1281px) {
+
+
+    #first-password,
+    #second-password {
+        width: 10%;
+    }
+}
