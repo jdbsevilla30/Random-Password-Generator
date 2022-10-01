@@ -50,10 +50,18 @@
 }
 
 
+body 
+{
+    background-color: whitesmoke;
+}
+
 @media (min-width:320px) {
 
-    body {
+    .allcontainer {
+        margin-left: auto;
+        margin-right: auto;
         background-color: #FFC482;
+        width: 100%;
     }
 
     #first-password,
@@ -74,7 +82,10 @@
 }
 
 @media (min-width:641px) {
+    .allcontainer {
 
+        width: 80%;
+    }
 
     #first-password,
     #second-password {
@@ -86,6 +97,11 @@
 @media (min-width:961px) {
 
 
+    .allcontainer {
+
+        width: 50%;
+    }
+
     #first-password,
     #second-password {
         width: 30%;
@@ -94,7 +110,10 @@
 }
 
 @media (min-width:1025px) {
+    .allcontainer {
 
+        width: 60%;
+    }
 
     #first-password,
     #second-password {
@@ -103,10 +122,13 @@
 }
 
 @media (min-width:1281px) {
+    .allcontainer {
 
+        width: 40%;
+    }
 
     #first-password,
     #second-password {
-        width: 10%;
+        width: 50%;
     }
 }
