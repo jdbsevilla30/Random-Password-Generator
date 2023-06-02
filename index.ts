@@ -94,18 +94,18 @@ const characters: string[] = [
 
 let firstPassword = document.getElementById("first-password") as HTMLElement;
 let secondPassword = document.getElementById("second-password") as HTMLElement;
-let buttonGenerate = document.getElementById('button-gen') as HTMLElement
+let buttonGenerate = document.getElementById('button-gen') as HTMLElement;
 
 let passLength = 15;
 
 let passwordStorageFirst: string = "";
 let passwordStorageSecond: string = "";
 
-buttonGenerate.addEventListener("click", function () {
-    console.log("Clicked")
-})
+buttonGenerate.addEventListener("click", generate)
+
 
 function generate(): void {
+    console.log("clicked")
     for (let i = 0; i <= passLength; i++) {
         passwordStorageFirst += generateChar1();
         passwordStorageSecond += generateChar2();
@@ -113,8 +113,6 @@ function generate(): void {
             passwordStorageFirst.length === passLength &&
             passwordStorageSecond.length === passLength
         ) {
-            console.log(passwordStorageFirst);
-            console.log(passwordStorageSecond);
             firstPassword.textContent = passwordStorageFirst;
             secondPassword.textContent = passwordStorageSecond;
             passwordStorageFirst = "";
