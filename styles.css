@@ -32,13 +32,13 @@
 
 }
 
-.btn-gen {
+.button-gen {
     border-radius: 8px;
     min-width: 10%;
     background-color: #66999B;
 }
 
-.btn-gen:hover {
+.button-gen:hover {
     cursor: alias;
 }
 
