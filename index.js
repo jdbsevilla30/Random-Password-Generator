@@ -1,4 +1,5 @@
-const characters: string[] = [
+"use strict";
+const characters = [
     "A",
     "B",
     "C",
@@ -91,28 +92,18 @@ const characters: string[] = [
     "?",
     "/",
 ];
-
-let firstPassword = document.getElementById("first-password") as HTMLElement;
-let secondPassword = document.getElementById("second-password") as HTMLElement;
-let buttonGenerate = document.getElementById('button-gen')
-
+let firstPassword = document.getElementById("first-password");
+let secondPassword = document.getElementById("second-password");
+let buttonGenerate = document.querySelector('.button-gen');
 let passLength = 15;
-
-let passwordStorageFirst: string = "";
-let passwordStorageSecond: string = "";
-
-buttonGenerate?.addEventListener("click", function () {
-    console.log("Clicked")
-})
-
-function generate(): void {
+let passwordStorageFirst = "";
+let passwordStorageSecond = "";
+function generate() {
     for (let i = 0; i <= passLength; i++) {
         passwordStorageFirst += generateChar1();
         passwordStorageSecond += generateChar2();
-        if (
-            passwordStorageFirst.length === passLength &&
-            passwordStorageSecond.length === passLength
-        ) {
+        if (passwordStorageFirst.length === passLength &&
+            passwordStorageSecond.length === passLength) {
             console.log(passwordStorageFirst);
             console.log(passwordStorageSecond);
             firstPassword.textContent = passwordStorageFirst;
@@ -122,13 +113,11 @@ function generate(): void {
         }
     }
 }
-
-function generateChar1(): string {
+function generateChar1() {
     let randomChar1 = Math.floor(Math.random() * characters.length);
     return characters[randomChar1];
 }
-
-function generateChar2(): string {
+function generateChar2() {
     let randomChar2 = Math.floor(Math.random() * characters.length);
     return characters[randomChar2];
 }
