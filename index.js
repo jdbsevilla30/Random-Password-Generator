@@ -94,10 +94,13 @@ const characters = [
 ];
 let firstPassword = document.getElementById("first-password");
 let secondPassword = document.getElementById("second-password");
-let buttonGenerate = document.querySelector('.button-gen');
+let buttonGenerate = document.getElementById('button-gen');
 let passLength = 15;
 let passwordStorageFirst = "";
 let passwordStorageSecond = "";
+buttonGenerate === null || buttonGenerate === void 0 ? void 0 : buttonGenerate.addEventListener("click", function () {
+    console.log("Clicked");
+});
 function generate() {
     for (let i = 0; i <= passLength; i++) {
         passwordStorageFirst += generateChar1();
